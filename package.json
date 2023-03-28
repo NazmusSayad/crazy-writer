@@ -1,0 +1,26 @@
+{
+  "name": "crazy-writer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist-cjs/index.cjs",
+  "scripts": {
+    "dev": "npm-ez dev",
+    "build": "npm-ez build"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "npm-ez": "^2.0.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.2"
+  },
+  "module": "./dist-mjs/index.mjs",
+  "exports": {
+    ".": {
+      "require": "./dist-cjs/index.cjs",
+      "import": "./dist-mjs/index.mjs",
+      "types": "./dist-mjs/index.mts"
+    }
+  }
+}
